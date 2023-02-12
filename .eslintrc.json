@@ -29,7 +29,6 @@
         "computed-property-spacing": ["error", "never"],
         "arrow-spacing": ["error", {"before": true, "after": true}],
         "space-infix-ops": ["error", { "int32Hint": false }],
-        "arrow-body-style": ["error", "as-needed"],
         "react/react-in-jsx-scope": "off",
         "no-console": "warn",
         "no-alert": "error"
