@@ -1,8 +1,15 @@
 import {FC, PropsWithChildren} from 'react'
-import {LocalizationProvider} from '@providers/LocalizationProvider'
+import {ReactQueryDevtools} from 'react-query/devtools'
+import {QueryClient, QueryClientProvider} from 'react-query'
+import {LocalizationProvider} from '@/components/Providers/LocalizationProvider'
+
+const queryClient = new QueryClient()
 
 export const MainProvider: FC<PropsWithChildren> = ({children}) => (
-  <LocalizationProvider>
-    {children}
-  </LocalizationProvider>
+  <QueryClientProvider client={queryClient}>
+    <LocalizationProvider>
+      <ReactQueryDevtools initialIsOpen={false} />
+      {children}
+    </LocalizationProvider>
+  </QueryClientProvider>
 )
