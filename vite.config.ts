@@ -1,17 +1,20 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { fileURLToPath, URL } from 'url'
+import type { InlineConfig } from 'vitest'
+import type { UserConfig } from 'vite'
+
+interface VitestConfigExport extends UserConfig {
+  test: InlineConfig
+}
 
 export default defineConfig({
   plugins: [react()],
-  resolve: {alias: {'@': fileURLToPath(new URL('./src', import.meta.url)),},},
-  // resolve: {
-  //   extensions: ['.ts', '.tsx'],
-  //   alias: {
-  //     '@providers': path.resolve(__dirname, './src/components/providers'),
-  //     '@types': path.resolve(__dirname, './src/types'),
-  //     '@components': path.resolve(__dirname, './src/components'),
-  //     '@hooks': path.resolve(__dirname, './src/hooks'),
-  //   }
-  // },
-})
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    setupFiles: ['./setupTests.ts'],
+  },
+  resolve: {alias: {'@': fileURLToPath(new URL('./src', import.meta.url))}},
+} as VitestConfigExport)
+

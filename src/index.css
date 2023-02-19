@@ -13,3 +13,16 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
+.quiesWrapper {
+    margin-top: 30px;
+    display: flex;
+}
+
+.quies {
+    padding: 30px;
+    border: 1px solid #ffffff;
+}
+.quieElem {
+    color: red;
+}
