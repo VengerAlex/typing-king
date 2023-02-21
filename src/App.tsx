@@ -1,14 +1,21 @@
-import {useEffect, useRef, useState} from 'react'
-import {Counter} from '@/components/Counter'
-import {Todos} from '@/components/Todos'
-export const sumAllNumbers = (array: number[]) => {
-  return array.reduce((accum, number) => accum + number, 0)
-}
+import {useEffect, useState} from 'react'
 
 export const App = () => {
+  const [color, setColor] = useState('black')
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setColor('blue')
+    }, 5000)
+
+    return () => {
+      clearTimeout(timer)
+    }
+  }, [])
+
   return (
-    <div className='app'>
-      <Todos />
+    <div className='app' style={{backgroundColor: color}}>
+      <h1>COLOR: {color}</h1>
     </div>
   )
 }
