@@ -8,7 +8,7 @@ import {
   useState,
 } from 'react'
 import {IntlProvider} from 'react-intl'
-import {LOCALES} from '@/types'
+import {LOCALES} from '@/helpers/types'
 import {useLocalStorage} from '@/hooks/useLocalStorage'
 import {loadLocaleData} from '@/helpers/utils/loadLocaleData'
 
