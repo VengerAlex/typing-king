@@ -1,10 +1,9 @@
-import {LOCALES} from '@types'
-import messages from '@providers/LocalizationProvider/messages'
+import en from '@/providers/LocalizationProvider/locales/en/common.json'
 
 declare global {
   namespace FormatjsIntl {
     interface Message {
-      ids: keyof typeof messages[LOCALES.ENGLISH]
+      ids: keyof typeof en
     }
   }
 }
