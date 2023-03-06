@@ -8,10 +8,31 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
+}
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: $white;
+}
+
+.container {
+  width: 1420px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.menu {
+  margin-bottom: 40px;
+}
+.menu__items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.active_menu {
+  color: $main;
 }

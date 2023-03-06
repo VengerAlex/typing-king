@@ -1,11 +1,14 @@
-import {FC, PropsWithChildren} from 'react'
+import {ReactElement} from 'react'
 import {LocalizationProvider} from '@/providers/LocalizationProvider'
 import {BrowserRouter} from 'react-router-dom'
+import {MainLayout} from '@/layouts/MainLayout'
 
-export const MainProvider: FC<PropsWithChildren> = ({children}) => (
+export const MainProvider = ({children}: {children: ReactElement}) => (
   <BrowserRouter>
     <LocalizationProvider>
-      {children}
+      <MainLayout>
+        {children}
+      </MainLayout>
     </LocalizationProvider>
   </BrowserRouter>
 )
