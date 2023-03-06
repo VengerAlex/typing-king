@@ -1,5 +1,5 @@
 import {FC, PropsWithChildren} from 'react'
-import {LocalizationProvider} from '@/components/Providers/LocalizationProvider'
+import {LocalizationProvider} from '@/providers/LocalizationProvider'
 
 export const MainProvider: FC<PropsWithChildren> = ({children}) => (
   <LocalizationProvider>

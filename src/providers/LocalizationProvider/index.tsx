@@ -6,7 +6,7 @@ import {
 import {IntlProvider} from 'react-intl'
 import {LOCALES} from '@/types'
 import {useLocalStorage} from '@/hooks/useLocalStorage'
-import messages from '@/components/Providers/LocalizationProvider/messages'
+import messages from '@/providers/LocalizationProvider/messages'
 
 interface ILocaleContext {
   locale: LOCALES,
