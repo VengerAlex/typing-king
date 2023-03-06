@@ -4,9 +4,9 @@ import {
   PropsWithChildren,
 } from 'react'
 import {IntlProvider} from 'react-intl'
-import {LOCALES} from '@types'
-import {useLocalStorage} from '@hooks/useLocalStorage'
-import messages from '@providers/LocalizationProvider/messages'
+import {LOCALES} from '@/types'
+import {useLocalStorage} from '@/hooks/useLocalStorage'
+import messages from '@/components/Providers/LocalizationProvider/messages'
 
 interface ILocaleContext {
   locale: LOCALES,

@@ -1,3 +1,3 @@
-import {LOCALES} from '@types'
+import {LOCALES} from '@/types'
 
 export default {[LOCALES.UKRAINIAN]: {'settings': 'Настройки'}}
