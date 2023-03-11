@@ -1,7 +1,8 @@
-import {useLocalization} from '@/providers/LocalizationProvider'
 import Select from 'react-select'
-import {customStyles} from '@/styles/react-select'
+
 import {LOCALES} from '@/helpers/types'
+import {useLocalization} from '@/providers/LocalizationProvider'
+import {customStyles} from '@/styles/react-select'
 
 type language = {value: LOCALES, label: string}
 

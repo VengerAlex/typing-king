@@ -1,7 +1,8 @@
-import {ROUTES} from '@/helpers/types'
 import {Gear, House} from 'phosphor-react'
-import {NavLink} from 'react-router-dom'
 import {ReactElement} from 'react'
+import {NavLink} from 'react-router-dom'
+
+import {ROUTES} from '@/helpers/types'
 
 type menu = {
   icon: ReactElement,

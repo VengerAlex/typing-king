@@ -1,6 +1,7 @@
-import {Localization} from '@/pages/Settings/components/Localization'
 import {Fragment} from 'react'
 import {FormattedMessage} from 'react-intl'
+
+import {Localization} from '@/pages/Settings/components/Localization'
 
 const Settings = () => {
   return (
