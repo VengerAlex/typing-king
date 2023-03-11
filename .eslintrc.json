@@ -9,7 +9,7 @@
         "plugin:react-hooks/recommended"
     ],
     "parser": "@typescript-eslint/parser",
-    "plugins": ["@typescript-eslint"],
+    "plugins": ["@typescript-eslint", "simple-import-sort"],
     "rules": {
         "react/display-name": "off",
         "template-curly-spacing": "off",
@@ -31,6 +31,7 @@
         "space-infix-ops": ["error", { "int32Hint": false }],
         "react/react-in-jsx-scope": "off",
         "no-console": "warn",
-        "no-alert": "error"
+        "no-alert": "error",
+        "simple-import-sort/imports": "error"
     }
 }
