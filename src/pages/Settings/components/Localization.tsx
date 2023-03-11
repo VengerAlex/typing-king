@@ -1,3 +1,5 @@
+import {Fragment} from 'react'
+import {FormattedMessage} from 'react-intl'
 import Select from 'react-select'
 
 import {LOCALES} from '@/helpers/types'
@@ -17,14 +19,24 @@ export const Localization = () => {
 
   const selectedValue = locale && languages.find(({value}) => value === locale)
 
-  return <Select
-    isMulti={false}
-    value={selectedValue}
-    onChange={(selectValue) => setLocale(selectValue?.value as LOCALES)}
-    isLoading={!locale}
-    isSearchable
-    styles={customStyles}
-    options={languages}
-    placeholder='Choose a language'
-  />
+  return <Fragment>
+    {locale}
+    <label
+      data-testid='hello'
+      className='label'
+      htmlFor='languages'
+    >
+      <FormattedMessage id='chooseLanguage' />
+    </label>
+    <Select
+      inputId='languages'
+      isMulti={false}
+      value={selectedValue}
+      onChange={(selectValue) => setLocale(selectValue?.value as LOCALES)}
+      isLoading={!locale}
+      isSearchable
+      styles={customStyles}
+      options={languages}
+    />
+  </Fragment>
 }
