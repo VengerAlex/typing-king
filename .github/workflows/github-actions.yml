@@ -12,7 +12,7 @@ jobs:
       - with:
           node-version: ${{ matrix.node-version }}
 
-        ################
+        #################
         # Install yarn #
         ################
       - name: install yarn
