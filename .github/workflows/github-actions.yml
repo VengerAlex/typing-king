@@ -12,26 +12,15 @@ jobs:
         node-version: [ 16.x ]
     steps:
       - uses: actions/checkout@v3
-      - name: Starting Node.js ${{ matrix.node-version }}
+      - name: Staring Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-
-        #################
-        # Build project #
-        #################
+      - name: install modules
+        run: yarn install
       - name: build project
         run: yarn build
-
-        #################
-        # Install yarn #
-        ################
-      - name: install yarn
-        run: npm -g install yarn@1.22.15
-
-        ############################
-        # Install all dependencies #
-        ############################
-      - name: install all dependencies
-        run: yarn install
-
+      - name: unit test
+        run: yarn test
+      - name: lint code
+        run: yarn lint
