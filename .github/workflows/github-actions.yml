@@ -23,7 +23,7 @@ jobs:
         # Install all dependencies #
         ############################
       - name: install all dependencies
-        run: yarn install --freeze-lock
+        run: yarn install
 
         ################################
         # Run ESLint against code base #
