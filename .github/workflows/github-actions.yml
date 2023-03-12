@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Starting Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
-      - with:
+        with:
           node-version: ${{ matrix.node-version }}
 
         #################
