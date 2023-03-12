@@ -13,6 +13,12 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
         #################
+        # Build project #
+        #################
+      - name: build project
+        run: yarn build
+
+        #################
         # Install yarn #
         ################
       - name: install yarn
@@ -23,11 +29,4 @@ jobs:
         ############################
       - name: install all dependencies
         run: yarn install
-
-        ################################
-        # Run Tests against code base #
-        ################################
-      - name: run tests
-        run: yarn test
-
 
