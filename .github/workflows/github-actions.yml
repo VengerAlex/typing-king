@@ -1,0 +1,40 @@
+name: GitHub Actions
+on: [push]
+jobs:
+  init:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [ 16.x ]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Starting Node.js ${{ matrix.node-version }}
+      - uses: actions/setup-node@v3
+      - with:
+          node-version: ${{ matrix.node-version }}
+
+        ################
+        # Install yarn #
+        ################
+      - name: install yarn
+        run: npm -g install yarn@1.22.15
+
+        ############################
+        # Install all dependencies #
+        ############################
+      - name: install all dependencies
+        run: yarn install --freeze-lock
+
+        ################################
+        # Run ESLint against code base #
+        ################################
+      - name: lint codebase
+        run: yarn lint
+
+        ################################
+        # Run Tests against code base #
+        ################################
+      - name: run tests
+        run: yarn test
+
+
