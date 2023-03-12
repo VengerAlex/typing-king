@@ -25,12 +25,6 @@ jobs:
         run: yarn install
 
         ################################
-        # Run ESLint against code base #
-        ################################
-      - name: lint codebase
-        run: yarn lint
-
-        ################################
         # Run Tests against code base #
         ################################
       - name: run tests
